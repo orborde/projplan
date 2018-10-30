@@ -77,14 +77,19 @@ def process(lines):
     for (lineno, line), subtree in tree:
         digest(lineno, line, subtree)
 
+    total=0
     for lineno,line in sorted(linesums.keys()):
         value, entry = parseline(line.lstrip())
         ilevel = indentlevel(line)
         iprefix = INDENTSTR*ilevel
         if value is None:
-            print('{}{} {}'.format(iprefix, linesums[(lineno,line)], entry))
-        else:
-            print('{}{} {}'.format(iprefix, value, entry))
+            value = linesums[(lineno,line)]
+
+        print('{}{} {}'.format(iprefix, value, entry))
+
+        if ilevel == 0:
+            total += value
+    print('{} total'.format(total))
 
 with open(PLANFILE) as f:
     lines = list(enumerate((l.strip('\n') for l in f), start=1))
