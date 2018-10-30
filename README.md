@@ -1,4 +1,4 @@
-An astoundingly minimal project planning tool. Many more sophisticated products make "add up all the remaining subtask time estimates" surprisingly difficult.
+An astoundingly minimal project planning tool. Many more sophisticated products make "add up all the remaining subtask time estimates" surprisingly difficult, despite it being pretty much the core function of a project planner.
 
 ```
 $ ./projplan.py PLAN
