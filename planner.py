@@ -69,6 +69,8 @@ def process(lines):
                 fail(lineno, "subtree sum does not match")
             value = sm
         assert lineno not in linesums
+        if value is None:
+            fail(lineno, "could not compute a subtree sum")
         linesums[(lineno,line)] = value
         return value
 
