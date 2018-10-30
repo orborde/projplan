@@ -1,6 +1,7 @@
 An astoundingly minimal project planning tool. Many more sophisticated products make "add up all the remaining subtask time estimates" surprisingly difficult.
 
-```$ ./projplan.py PLAN
+```
+$ ./projplan.py PLAN
 6 Eat bacon
   1 Taste the rainbow
   4 Flub the cheese
